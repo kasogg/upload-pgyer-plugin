@@ -359,10 +359,10 @@ public class PgyerUploadV2 {
             }
 
             if (pgyerBeanV2.getCode() != 0) {
-                if(pgyerBeanV2.getCode() == 1246){
+                if(pgyerBeanV2.getCode() == 1246 || pgyerBeanV2.getCode() == 1247){
                     CommonUtil.printMessage(listener, true, "upload：Pgyer has not synchronized the results");
                     bGo = true;
-                    delay = 2000;
+                    delay = 5000;
                     return uploadResult(url,paramsBeanV2,listener);
                 } else {
                     CommonUtil.printMessage(listener, true, "Upload failed with pgyer api v2!");
